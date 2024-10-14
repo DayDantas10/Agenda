@@ -25,16 +25,15 @@
       <input type="date" class="form-control" id="aniversario" #aniversario>
     </div>
     <div class="col-md-4">
-      <label for="tipo" class="form-label">Tipo</label >
-      <select id="text" class="form-select" #tipo>
-        <option selected> </option>
-        <option>...</option>
+      <label for="tipo" class="form-label">Tipo</label>
+      <select id="text" class="form-select">
+        <option *ngFor="let tp of tipos" [value]="tp">{{tp}}</option>
       </select>
     </div>
+
     <div class="col-12">
-   <input class="btn btn-dark" type="button" value="Cadastrar" 
-         (click)="inserirContato(nome,telefone, email, aniversario)">                            
+      <input class="btn btn-dark" type="button" value="Cadastrar" >
+      <!-- (click)="inserirContato(nome,telefone, email, aniversario)">  -->
     </div>
   </form>
-
 </div>

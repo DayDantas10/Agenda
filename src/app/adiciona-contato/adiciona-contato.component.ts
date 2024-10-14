@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Agenda } from './agenda';
-import { Contato } from './contato';
+import { Contato, Tipo } from './contato';
 
 @Component({
   selector: 'app-adiciona-contato',
@@ -9,6 +9,10 @@ import { Contato } from './contato';
 })
 export class AdicionaContatoComponent {
 
+tipos:string[]
+constructor(){
+  this.tipos = Object.values(Tipo)
+}
 inserirContato({ nome, telefone, email, aniversario }: { nome: string; telefone: string; email: string; aniversario: Date; }){
 
 }
