@@ -10,8 +10,14 @@ import { Contato, Tipo } from './contato';
 export class AdicionaContatoComponent {
 
 tipos:string[]
+contato:string
 constructor(){
+  Cadastrar() = new Contato('','','','',"")
   this.tipos = Object.values(Tipo)
+
+  function Cadastrar() {
+    return this.contato;
+  }
 }
 inserirContato({ nome, telefone, email, aniversario }: { nome: string; telefone: string; email: string; aniversario: Date; }){
 

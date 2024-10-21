@@ -34,7 +34,7 @@ obterContatoPorTelefone(telefone: string): Contato | undefined {
     }
     return undefined
 }
-obterContatoPorNome(nome: string): Contato | undefined {
+obterContatoPorNome({ nome }: { nome: string; }): Contato | undefined {
     for (let contato of this.contatos) {
         if (contato.obterNome() === nome) {
             return contato
