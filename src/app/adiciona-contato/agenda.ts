@@ -4,7 +4,7 @@ export class Agenda{
     private contatos: Contato[] = []
 
 
-inserirContatoporNome(contato: Contato): boolean {
+inserirContato({ contato }: { contato: Contato; }): boolean {
     if (this.ContatosExistentes(contato.obterNome())) {
         console.log(`O contato ${contato.obterNome()} já está na agenda.`)
         return false
