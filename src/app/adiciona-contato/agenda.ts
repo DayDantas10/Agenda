@@ -4,13 +4,24 @@ export class Agenda{
     private contatos: Contato[] = []
 
 
-inserirContato(contato: Contato): boolean {
+inserirContatoporNome(contato: Contato): boolean {
     if (this.ContatosExistentes(contato.obterNome())) {
         console.log(`O contato ${contato.obterNome()} já está na agenda.`)
         return false
     } else {
         this.contatos.push(contato);
         console.log(`O contato ${contato.obterNome()} foi adicionado com sucesso à agenda.`)
+        return true
+    }
+}
+
+inserirContatoportel(contato: Contato): boolean {
+    if (this.ContatosExistentes(contato.ObterTelefone())) {
+        console.log(`O contato ${contato.ObterTelefone()} já está na agenda.`)
+        return false
+    } else {
+        this.contatos.push(contato);
+        console.log(`O contato ${contato.ObterTelefone()} foi adicionado com sucesso à agenda.`)
         return true
     }
 }

@@ -8,18 +8,20 @@ import { Contato, Tipo } from './contato';
   styleUrl: './adiciona-contato.component.css'
 })
 export class AdicionaContatoComponent {
+inserirContato(_t9: HTMLInputElement) {
+throw new Error('Method not implemented.');
+}
 
 tipos:string[]
-contato:string
+contato:string | undefined
 constructor(){
-  Cadastrar() = new Contato('','','','',"")
   this.tipos = Object.values(Tipo)
 
-  function Cadastrar() {
+  const Cadastrar = () => {
     return this.contato;
   }
 }
-inserirContato({ nome, telefone, email, aniversario }: { nome: string; telefone: string; email: string; aniversario: Date; }){
+inserirContatoporNome({nome}: { nome: string;  }){
 
 }
  
