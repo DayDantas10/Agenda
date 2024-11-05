@@ -1,4 +1,5 @@
-import { Contato, Tipo} from "./contato";
+import { Contato} from "./contato"
+import { TipoContato } from "../../../tipo-contato.enum";
 
 export class Agenda{
     private contatos: Contato[] = []
@@ -62,4 +63,3 @@ private ContatosExistentes(nome:string):boolean{
     } return  false
 }
 }
-

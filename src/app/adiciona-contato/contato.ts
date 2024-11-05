@@ -1,9 +1,4 @@
-export enum Tipo {
-    AMIGO = 'Amigo(a)',
-    FAMILIA = 'Familia',
-    TRABALHO = 'Trabalho'
-}
-
+import { TipoContato } from "../../../tipo-contato.enum"
 export class Contato {
     static obterMatriculados(): any {
         throw new Error("Method not implemented.")
@@ -15,14 +10,16 @@ export class Contato {
     private telefone: string
     private email: string
     private aniversario: string
-    private tipo: Tipo
+    private tipo: TipoContato
+    private favorito: boolean
 
-    constructor(nome: string, tel: string, email: string, aniversario: string, tipo: Tipo) {
+    constructor(nome: string, tel: string, email: string, aniversario: string, tipo: TipoContato, fav:boolean) {
         this.nome = nome
         this.telefone = tel
         this.email = email
         this.aniversario = aniversario
         this.tipo = tipo
+        this.favorito = fav
     }
 
     obterNome(): string {
@@ -49,14 +46,14 @@ export class Contato {
     obterAniversario(): string{
         return this.aniversario
     }
-    alterarAniversario(aniversario: string): string {
+    alterarAniversario(_aniversario: string): string {
         this.aniversario = this.aniversario
         return this.aniversario
     }
     obterTipo(): string {
         return this.tipo
     }
-    alterarTipo(tipo: Tipo): Tipo {
+    alterarTipo(tipo: TipoContato): TipoContato {
         this.tipo = tipo
         return this.tipo
     }
