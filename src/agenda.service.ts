@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TipoContato } from '../tipo-contato.enum';
 import { Contato } from './app/adiciona-contato/contato';
 
 @Injectable({
@@ -31,9 +32,8 @@ export class AgendaService {
     obterTodos(): Contato[] { 
       return this.contatos; 
     }
-
-    /** Devolve um contato dado o seu telefone */
+    /** Devolve um contato dado o seu telefone 
     obterContatoPeloTelefone(tel: string): Contato {
-      return new Contato('', '', '', '', '', '', '');
-    }
+      return new Contato('','','','', TipoContato ,'');
+    }*/
 }

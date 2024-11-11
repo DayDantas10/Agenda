@@ -1,5 +1,6 @@
 import { TipoContato } from "../../../tipo-contato.enum"
 export class Contato {
+ 
     static obterMatriculados(): any {
         throw new Error("Method not implemented.")
     }
@@ -56,6 +57,10 @@ export class Contato {
     alterarTipo(tipo: TipoContato): TipoContato {
         this.tipo = tipo
         return this.tipo
+    }
+    obterFavorito(_favorito: string):boolean{    
+        this.favorito
+        return true
     }
 
 }

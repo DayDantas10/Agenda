@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Contato } from './contato';
 import { TipoContato } from '../../../tipo-contato.enum';
 import { AgendaService } from '../../agenda.service';
 
