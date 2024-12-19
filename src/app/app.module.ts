@@ -1,22 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';  // Importe o FormsModule aqui
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdicionaContatoComponent } from './adiciona-contato/adiciona-contato.component';
-import { ExibeContatosComponent } from './exibe-contatos/exibe-contatos.component';
-import { ExibeFavoritosComponent } from './exibe-favoritos/exibe-favoritos.component';
+import { AdicionaContatoComponent } from './adiciona-contato/adiciona-contato.component'; // Ajuste o caminho conforme necessário
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdicionaContatoComponent,
-    ExibeContatosComponent,
-    ExibeFavoritosComponent
+    AdicionaContatoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule // Adicione o FormsModule aqui
   ],
   providers: [],
   bootstrap: [AppComponent]
